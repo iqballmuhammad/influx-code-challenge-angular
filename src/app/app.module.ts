@@ -12,7 +12,8 @@ import { MatCardModule,
   MatListModule,
   MatGridListModule,
   MatSnackBarModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatInputModule
   } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -49,6 +50,7 @@ import { PlanetService } from './planet.service';
     MatGridListModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
+    MatInputModule,
     HttpModule
   ],
   providers: [PlanetService],

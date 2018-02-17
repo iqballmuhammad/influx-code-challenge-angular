@@ -1,1 +1,45 @@
+<div class="example-form">
+        <mat-form-field class="example-full-width">
+          <input 
+            type="search" 
+            matInput 
+            placeholder="Search by planet name"
+            (keyup.enter)="searchName(name.value)"
+            #name>
+        </mat-form-field>
+        Or
+        <mat-form-field class="example-full-width">
+            <input 
+                type="search" 
+                matInput 
+                placeholder="Search by star system"
+                (keyup.enter)="searchStar(star.value)"
+                #star>
+        </mat-form-field>
+        Or
+        <button 
+            mat-raised-button 
+            (click)="getInitialPlanets()"
+            class="example-full-width"
+        >
+            Browse All Planets
+        </button>
+</div>
 <app-planet-list [planets]="planets"></app-planet-list>
+<div class="pagination" *ngIf="show">
+        <button 
+            mat-icon-button 
+            (click)="getPrevPlanets()"
+            *ngIf="page != 1"
+        >
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+        <p>Page {{ page }} of {{ totalPage }} </p>
+        <button 
+            mat-icon-button 
+            (click)="getNextPlanets()"
+            *ngIf="page != totalPage"
+        >
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+</div>

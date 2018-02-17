@@ -1,15 +1,19 @@
 <mat-toolbar class="mat-elevation-z6" color="primary">
   
-    <a mat-button routerLink="">
-      <mat-icon>home</mat-icon>
-      <span>Star War Universe</span>
+    <a mat-button routerLink="/">
+      <img src="../../assets/logo.png" alt="" height="50px">
+      <span>Universe</span>
     </a>
   
   <!-- This fills the remaining space of the current row -->
   <span class="example-fill-remaining-space"></span>
+  <a mat-button href="https://github.com/iqballmuhammad/influx-code-challenge-angular">
+    <img src="../../assets/github.png" alt="" height="30px">
+    GitHub
+  </a>
   <button mat-button [matMenuTriggerFor]="menu">
     <mat-icon>account_box</mat-icon>
-    Account
+    Example Menu
   </button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item>My Profile</button>
