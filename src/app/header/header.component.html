@@ -1,0 +1,19 @@
+<mat-toolbar class="mat-elevation-z6" color="primary">
+  
+    <a mat-button routerLink="">
+      <mat-icon>home</mat-icon>
+      <span>Star War Universe</span>
+    </a>
+  
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_box</mat-icon>
+    Account
+  </button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>My Profile</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>Sign Out</button>
+</mat-menu>
+</mat-toolbar>

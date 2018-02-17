@@ -1,0 +1,30 @@
+<h1>Influx Code Challenge</h1>
+<img width="100" style="border-radius: 50%;" src="https://influx.com/assets/ackbar-22cbe73971f5b3210c5bdf1a6740aa9f.jpg" alt="Ackbar">
+<p>There are over 3000 known planets in the universe! We need an app to help us find planets quickly.</p>
+<h3>The API</h3>
+<p>The planet database can be accessed via the following API endpoint:</p>
+  <pre style="padding: 1rem; background: grey  ">https://influx.com/code-challenge/planets.json</pre>
+<p>The endpoint accepts the following parameters:</p>
+<div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource">
+      <!-- Parameter Column -->
+      <ng-container matColumnDef="parameter">
+          <mat-header-cell *matHeaderCellDef> Parameter </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.parameter}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="type">
+          <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="description">
+          <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+      </ng-container>  
+      <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+      <mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></mat-row>
+    </mat-table>
+  </div>
+  <h3>The Challenge</h3>
+  <p>Using the JavaScript framework of your choice:</p>
+  <p>Build a single page application to fetch data from the API and present it to the user.</p>
+  <p>The user should be able to browse all of the planets in the Star Wars universe.</p>
